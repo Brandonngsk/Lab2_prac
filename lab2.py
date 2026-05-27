@@ -22,5 +22,21 @@ def calculate_min_max_temperature(num_list):
     
     return [minimum, maximum]
     
+def sort_temperature(num_list):
+    sorted_list = sorted(num_list)
+    return sorted_list
+def calc_median_temperature(num_list):
+    sorted_list = sort_temperature(num_list)
+    length = len(sorted_list)
+    if length % 2 == 0:
+    # Even — average of two middle values
+       mid1 = length // 2 - 1
+       mid2 = length // 2
+       median = (sorted_list[mid1] + sorted_list[mid2]) / 2
+    else:
+        # Odd — middle value
+        mid = length // 2
+        median = sorted_list[mid]
+    return median
     
     
